@@ -1,0 +1,128 @@
+.formulario {
+    margin-top: 3rem;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.formulario fieldset {
+    border: none;
+}
+
+.contacto {
+    font-size: 2rem;
+    color: #1a202c;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.contenedor-campos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    margin-bottom: .5rem;
+    font-weight: 600;
+    color: #2d3748;
+}
+
+.input-text {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: .5rem;
+    transition: all 0.3s ease;
+    background-color: #f8f9fa;
+}
+
+.input-text:focus {
+    border-color: #4A90E2;
+    box-shadow: 0 0 5px rgba(74,144,226,0.2);
+    outline: none;
+}
+
+.campo textarea {
+    height: 12rem;
+    resize: vertical;
+    background-color: #f8f9fa;
+}
+
+.alinear-derecha {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+}
+
+.boton {
+    background-color: #4A90E2;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.boton:hover {
+    background-color: #357ABD;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.w-sm-100 {
+    width: 100%;
+}
+
+/* ==========================================
+   📱 Responsivo
+   ========================================== */
+@media (max-width: 768px) {
+    .contenedor-campos {
+        grid-template-columns: 1fr; /* ✅ una sola columna en tablets/móviles */
+        gap: 1.5rem;
+    }
+
+    .contacto {
+        font-size: 1.8rem;
+    }
+
+    .input-text {
+        font-size: 1rem;
+        padding: 0.9rem;
+    }
+
+    .boton {
+        width: 100%; /* ✅ el botón ocupa todo el ancho */
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .formulario {
+        padding: 1.5rem; /* menos padding en móviles pequeños */
+    }
+
+    .contacto {
+        font-size: 1.6rem;
+    }
+
+    .input-text {
+        font-size: 0.95rem;
+        padding: 0.8rem;
+    }
+
+    .boton {
+        font-size: 0.9rem;
+        padding: 0.8rem 1.5rem;
+    }
+}

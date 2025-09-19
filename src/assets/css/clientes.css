@@ -1,0 +1,162 @@
+/* ==========================================
+   Sección Clientes
+   ========================================== */
+.clientes {
+  background-color: #fefefe;
+  padding: 5rem 1.5rem;
+}
+
+.clientes .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Títulos y texto */
+.clientes .title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 1.5rem;
+}
+
+.clientes .intro {
+  font-size: 1.4rem;
+  color: #555;
+  margin-bottom: 3rem;
+  line-height: 1.7;
+}
+
+/* ==========================================
+   Grid de clientes
+   ========================================== */
+.clientes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+}
+
+/* ==========================================
+   Tarjetas individuales de cliente
+   ========================================== */
+.cliente-card {
+  background: linear-gradient(145deg, #ffffff, #f2f2f2);
+  border-radius: 1.2rem;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.6s ease-out;
+  opacity: 0;
+  transform: translateY(50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cliente-card img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.cliente-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #674500;
+  margin-bottom: 0.75rem;
+}
+
+.cliente-card p {
+  font-size: 1.3rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Hover futurista */
+.cliente-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+.cliente-card:hover img {
+  transform: scale(1.1);
+}
+
+/* ==========================================
+   Efecto scroll
+   ========================================== */
+.scroll-visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* ==========================================
+   📱 Responsividad
+   ========================================== */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .clientes {
+    padding: 4rem 1rem;
+  }
+
+  .clientes .title {
+    font-size: 2.2rem;
+  }
+
+  .clientes .intro {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .cliente-card {
+    padding: 1.8rem;
+  }
+
+  .cliente-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .cliente-card p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Móviles */
+@media (max-width: 576px) {
+  .clientes {
+    padding: 3rem 1rem;
+  }
+
+  .clientes .title {
+    font-size: 1.8rem;
+  }
+
+  .clientes .intro {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .clientes-grid {
+    grid-template-columns: 1fr; /* ✅ una sola columna en móviles */
+    gap: 1.5rem;
+  }
+
+  .cliente-card {
+    padding: 1.5rem;
+  }
+
+  .cliente-card img {
+    width: 80px;
+    margin-bottom: 1rem;
+  }
+
+  .cliente-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .cliente-card p {
+    font-size: 1rem;
+  }
+}

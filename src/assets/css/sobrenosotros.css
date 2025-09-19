@@ -1,0 +1,152 @@
+.sobre-nosotros {
+  padding: 5rem 2rem;
+  background-color: #f9f9f9;
+}
+
+.sobre-nosotros .container {
+  max-width: 1100px; /* corregido */
+  margin: 0 auto;
+}
+
+.sobre-nosotros-card {
+  background: linear-gradient(145deg, #ffffff, #f3f3f3);
+  border-radius: 1.5rem;
+  padding: 3rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.sobre-nosotros-card .title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: var(--primario);
+}
+
+.sobre-nosotros-card .intro {
+  font-size: 1.4rem;
+  color: #444;
+  margin-bottom: 3rem;
+  text-align: center;
+  line-height: 1.7;
+}
+
+.sobre-nosotros-card .highlight {
+  font-weight: 600;
+  color: var(--primario);
+}
+
+/* Contenedor de las 3 tarjetas */
+.inner-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* Tarjetas internas */
+.inner-card {
+  background: linear-gradient(145deg, #ffffff, #f2f2f2);
+  padding: 2rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.6s ease;
+}
+
+/* Aparición al entrar en viewport */
+.inner-card.scroll-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Hover */
+.inner-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+.inner-card h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1a202c;
+}
+
+.inner-card p,
+.inner-card ul {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.inner-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.inner-card li {
+  margin-bottom: 0.8rem;
+}
+
+.inner-card li span {
+  font-weight: 600;
+}
+
+/* ==========================================
+   📱 Responsivo
+   ========================================== */
+@media (max-width: 992px) {
+  .sobre-nosotros-card {
+    padding: 2.5rem;
+  }
+
+  .sobre-nosotros-card .title {
+    font-size: 2.4rem;
+  }
+
+  .sobre-nosotros-card .intro {
+    font-size: 1.3rem;
+  }
+
+  .inner-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .inner-card p,
+  .inner-card ul {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .sobre-nosotros-card {
+    padding: 2rem 1rem;
+  }
+
+  .sobre-nosotros-card .title {
+    font-size: 2rem;
+  }
+
+  .sobre-nosotros-card .intro {
+    font-size: 1.1rem;
+  }
+
+  .inner-cards {
+    grid-template-columns: 1fr; /* ✅ tarjetas apiladas en móviles */
+    gap: 1.5rem;
+  }
+
+  .inner-card {
+    padding: 1.5rem;
+  }
+
+  .inner-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .inner-card p,
+  .inner-card ul {
+    font-size: 1rem;
+  }
+}

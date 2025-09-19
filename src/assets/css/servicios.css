@@ -1,0 +1,85 @@
+.servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); /* ✅ más flexible */
+    gap: 2rem;
+    margin: 3rem 0; /* corregido: margin-top y margin-bottom */
+    padding: 2rem;
+}
+
+.servicio {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 1rem;
+    transition: transform .3s ease, box-shadow .3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* sombra ligera */
+}
+
+.servicio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+main.contenedor.sombra h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.servicio h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.iconos {
+    display: flex;
+    justify-content: center; /* centra los iconos */
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem 0; /* quité padding lateral fijo de 20rem */
+}
+
+.servicio p {
+    font-size: 1.5rem;
+    color: #4a4a4a;
+}
+
+/* ==========================================
+   📱 Responsivo
+   ========================================== */
+@media (max-width: 992px) {
+    .servicios {
+        grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    }
+
+    .servicio h3 {
+        font-size: 1.8rem;
+    }
+
+    .servicio p {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .servicios {
+        grid-template-columns: 1fr; /* ✅ una sola columna en móviles */
+        padding: 1rem;
+    }
+
+    .servicio {
+        padding: 1.5rem;
+    }
+
+    .servicio h3 {
+        font-size: 1.5rem;
+    }
+
+    .servicio p {
+        font-size: 1.2rem;
+    }
+
+    .iconos {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+}

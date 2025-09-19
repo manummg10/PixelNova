@@ -1,0 +1,58 @@
+.contenedor {
+    width: 90%;
+    max-width: 1200px; /* ✅ ya corregido */
+    margin: 0 auto;
+}
+
+.sombra {
+    -webkit-box-shadow: 0px 5px 15px rgba(0,0,0,.05);
+    -moz-box-shadow: 0px 5px 15px rgba(0,0,0,.05);
+    box-shadow: 0px 5px 15px rgba(0,0,0,.05);
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sombra:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.08);
+}
+
+.flex {
+    display: flex;
+    gap: 1rem; /* ✅ separación por defecto */
+}
+
+.alinear-derecha {
+    justify-content: flex-end;
+}
+
+/* ==========================================
+   📱 Responsivo
+   ========================================== */
+@media (max-width: 768px) {
+    .flex {
+        flex-direction: column; /* ✅ en tablets/móviles, se apila */
+        gap: 1.5rem;
+    }
+
+    .alinear-derecha {
+        justify-content: center; /* ✅ mejor en pantallas pequeñas */
+    }
+
+    .sombra {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor {
+        width: 95%; /* ✅ un poco más ancho en móviles */
+    }
+
+    .sombra {
+        padding: 1rem;
+        border-radius: 0.7rem;
+    }
+}

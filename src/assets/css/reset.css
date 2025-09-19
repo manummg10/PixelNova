@@ -1,0 +1,86 @@
+/* ==========================================
+   🔄 Reset complementario mínimo mejorado
+   ========================================== */
+
+/* Box-sizing universal */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Tipografía y cuerpo */
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%; /* Evita zoom automático en iOS */
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem; /* 16px base */
+  line-height: 1.5;
+  color: #212121; /* gris oscuro */
+  background-color: #ffffff; /* fondo claro */
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden; /* evita scroll horizontal */
+}
+
+/* Tipos de letra comunes */
+h1, h2, h3, h4, h5, h6, p, li, span, a, button, input, textarea {
+  font-family: inherit;
+  font-weight: normal;
+  color: inherit;
+}
+
+/* Enlaces */
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* Imágenes y medios */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Formularios */
+input, button, textarea, select {
+  font: inherit;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Listas */
+ul, ol {
+  list-style: none;
+}
+
+/* Contenedor principal */
+main {
+  display: block;
+}
+
+/* Tabla básica */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+/* Asegurar que videos y iframes sean responsivos */
+iframe {
+  max-width: 100%;
+  border: none;
+}
